@@ -5,6 +5,7 @@ This repository contains an official implementation of "[AFiRe: Anatomy-Driven S
 ----
 ## How to Perform Pre-train
 ----
+We build our architecture by referring to the released code at [DINO](https://github.com/facebookresearch/dino) and [MAE](https://github.com/facebookresearch/mae).
 ### Step 1
 We use the normal images in  [Johnson et al. MIMIC-CXR-JPG](https://physionet.org/content/mimic-cxr-jpg/2.0.0/) for pre-training.
 ### Step 2
