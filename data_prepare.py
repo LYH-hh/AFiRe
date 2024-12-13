@@ -128,9 +128,9 @@ def generate_synthtic_lesion_images(image_folder, output_folder_synthe, output_f
             cv2.imwrite(noise_mask_path, noise_mask)
         print(filename)
 
-image_folder = '/lyh/dataset/wellPrepared/chestXray/train/normal'
-output_folder_synthe = '/lyh/dataset/AFiRe/inputs'
-output_folder_mask = '/lyh/dataset/AFiRe/masks'
-label_folder = '/lyh/dataset/AFiRe/labels'
+image_folder = '/normal'
+output_folder_synthe = '/AFiRe/images/inputs'
+output_folder_mask = '/AFiRe/images/masks'
+label_folder = '/AFiRe/images/labels'
 generate_synthtic_lesion_images(image_folder, output_folder_synthe, output_folder_mask, label_folder)
 print("finish")
