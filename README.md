@@ -16,6 +16,7 @@ Augmentation images using SLM:
 ```
 python data_prepare.py
 ```
+We provide some generated samples in the [images.zip](https://github.com/LYH-hh/AFiRe/blob/main/images.zip)
 ### Step 3
 ```
 python main_AfiRe.py --nodes 2 --ngpus 8 --arch vit_base --data_path ['/AFiRe/images/inputs', '/AFiRe/images/masks','/AFiRe/images/labels'] --output_dir ./output/pretrain/
