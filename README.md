@@ -1,8 +1,11 @@
 # AFiRe (AAAI'25)
 This repository contains an official implementation of "[AFiRe: Anatomy-Driven Self-Supervised Learning for Fine-Grained Representation in Radiographic Images]" has been accepted by AAAI2025. 
 
-**Our fine-tuning tasks are refer the official code from [here](https://github.com/RL4M/MRM-pytorch).**
-----
+## How to Perform Fine-tune
+---
+Download the [pre-trained weight](https://drive.google.com/file/d/1VeMGrW2m6p-y5z2k55Jd862RtptFoaav/view?usp=sharing).
+Our fine-tuning tasks are referred to the official code from [here](https://github.com/RL4M/MRM-pytorch).
+
 ## How to Perform Pre-train
 ----
 We build our architecture by referring to the released code at [DINO](https://github.com/facebookresearch/dino) and [MAE](https://github.com/facebookresearch/mae).
