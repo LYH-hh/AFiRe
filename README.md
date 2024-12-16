@@ -3,9 +3,16 @@ This repository contains an official implementation of "[AFiRe: Anatomy-Driven S
 
 ## How to Perform Fine-tune
 ---
-Download the [pre-trained weight](https://drive.google.com/file/d/1VeMGrW2m6p-y5z2k55Jd862RtptFoaav/view?usp=sharing).
+Download AFiRe's [pre-trained weight](https://drive.google.com/file/d/1VeMGrW2m6p-y5z2k55Jd862RtptFoaav/view?usp=sharing).
+Load the weights to the ViT-B model:
+```
+weights_dict = torch.load("./AFiRe_ViT-B.pth", map_location=torch.device('cuda'))['teacher']
+for key in list(weights_dict.keys()):
+    new_key = key.replace('encoder.', 'module.')
+    weights_dict[new_key] = weights_dict.pop(key)
+model.load_state_dict(weights_dict, strict=False)
+```
 Our fine-tuning classification tasks are referred to the official code from [here](https://github.com/funnyzhou/REFERS) and segmentation tasks are referred to [here](https://github.com/SZUHvern/MaCo).
-
 ## How to Perform Pre-train
 ----
 We build our architecture by referring to the released code at [DINO](https://github.com/facebookresearch/dino) and [MAE](https://github.com/facebookresearch/mae).
